@@ -1,114 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MarketingProdjone | Affiliate Marketing</title>
-  <meta name="description" content="MarketingProdjone – product recommendations from Amazon and Pinterest inspiration." />
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; background:#f7f7f7; color:#333; }
-    header { background:#111; color:#fff; padding:20px; }
-    nav a { color:#fff; margin-right:15px; text-decoration:none; font-weight:bold; }
-    .container { max-width:1100px; margin:auto; padding:20px; }
-    .card { background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); margin-bottom:20px; }
-    footer { background:#111; color:#fff; text-align:center; padding:15px; }
-    .btn { display:inline-block; padding:10px 16px; background:#e47911; color:#fff; text-decoration:none; border-radius:5px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketingProdjone | Pinterest Boards</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #f7f7f7; color: #333; }
+        header { background: #111; color: #fff; padding: 20px; text-align: center; }
+        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        .container { max-width: 1100px; margin: auto; padding: 20px; }
+        
+        /* Stil za Pinterest mrežu ploča */
+        .boards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 20px 0;
+        }
+        
+        .board-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s;
+        }
+        
+        .board-card:hover { transform: translateY(-5px); }
+        
+        .board-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: #eee;
+        }
+        
+        .board-info { padding: 15px; text-align: left; }
+        .board-info h3 { margin: 0; font-size: 1.2rem; color: #222; }
+        .board-info p { margin: 5px 0 0; color: #777; font-size: 0.9rem; }
+
+        footer { background: #111; color: #fff; text-align: center; padding: 15px; margin-top: 40px; }
+    </style>
 </head>
 <body>
 
 <header>
-  <h1>MarketingProdjone</h1>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#preporuke">Recommendations</a>
-    <a href="#kontakt">Contact</a>
-  </nav>
+    <h1>MarketingProdjone</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#kontakt">Contact</a>
+    </nav>
 </header>
 
 <div class="container">
+    <section id="welcome">
+        <h2>Welcome to My Boards</h2>
+        <p>Explore curated products inspired by my Pinterest collections.</p>
+    </section>
 
-  <section id="home" class="card">
-    <h2>Welcome</h2>
-    <p>MarketingProdjone is a website dedicated to affiliate marketing through <strong>Amazon</strong> and inspiration from <strong>Pinterest</strong>.</p>
-    <p>We recommend carefully selected products that can improve your daily life.</p>
-  </section>
+    <div class="boards-grid">
+        
+        <a href="home-gadgets.html" class="board-card">
+            <img src="https://m.media-amazon.com/images/I/71BDp9-RWKL._AC_SL1500_.jpg" class="board-image" alt="Home Gadgets">
+            <div class="board-info">
+                <h3>Modern Home Gadgets</h3>
+                <p>17 pins • Explore items</p>
+            </div>
+        </a>
 
-  <section id="preporuke" class="card">
-    <h2>Affiliate Recommendations</h2>
-    <p>Here you will find products we recommend.</p>
-    <ul>
-      <li>Top home gadgets</li>
-      <li>Fitness and Health</li>
-      <li>Online tools and Marketing</li>
-    </ul>
-    <p><em>Note: This page contains affiliate links. By purchasing through them, you support our work.</em></p>
-    <a class="btn" href="#">View Products</a>
-  </section>
+        <a href="fitness.html" class="board-card">
+            <img src="https://m.media-amazon.com/images/I/51imrSup74L._AC_.jpg" class="board-image" alt="Fitness">
+            <div class="board-info">
+                <h3>Viral Fitness Essentials</h3>
+                <p>3 pins • Explore items</p>
+            </div>
+        </a>
 
-  <section id="recommendations" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; padding: 40px 20px; background-color: #f9f9f9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        <a href="beauty.html" class="board-card">
+            <img src="https://m.media-amazon.com/images/I/610SRuSM6JL._AC_SL1500_.jpg" class="board-image" alt="Beauty">
+            <div class="board-info">
+                <h3>Beauty & Personal Care</h3>
+                <p>3 pins • Explore items</p>
+            </div>
+        </a>
 
-  <div style="background: white; border-radius: 15px; width: 300px; padding: 20px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s;">
-    <img src="https://m.media-amazon.com/images/I/811-tPSBMML._AC_SL1500_.jpg" alt="Product Image" style="width: 100%; height: 220px; object-fit: contain; border-radius: 10px;">
-    
-    <h3 style="color: #222; font-size: 1.25rem; margin: 15px 0 10px;">Modern Home Gadget</h3>
-    
-    <p style="color: #777; font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
-      Discover how this essential tool can simplify your daily routine and upgrade your home aesthetic.
-    </p>
-    
-    <a href="https://amzn.to/4jz3reg" target="_blank" style="display: inline-block; background: #FF9900; color: #fff; padding: 12px 25px; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-      Check Price on Amazon
-    </a>
-  </div>
+        <a href="phones.html" class="board-card">
+            <img src="https://m.media-amazon.com/images/I/61jiH8WkmHL._AC_SL1000_.jpg" class="board-image" alt="Phones">
+            <div class="board-info">
+                <h3>Amazon Cell Phones</h3>
+                <p>1 pin • Explore items</p>
+            </div>
+        </a>
 
-  <div style="background: white; border-radius: 15px; width: 300px; padding: 20px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s;">
-    <img src="https://m.media-amazon.com/images/I/710Dp9-RWKL._AC_SL1500_.jpg" alt="Product Image" style="width: 100%; height: 220px; object-fit: contain; border-radius: 10px;">
-    
-    <h3 style="color: #222; font-size: 1.25rem; margin: 15px 0 10px;">Viral Fitness Essential</h3>
-    
-    <p style="color: #777; font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">
-      The perfect addition to your home gym as seen on Pinterest. Durable, effective, and stylish.
-    </p>
-    
-    <a href="https://amzn.to/4qKpbWW" target="_blank" style="display: inline-block; background: #FF9900; color: #fff; padding: 12px 25px; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-      Check Price on Amazon
-    </a>
-  </div>
- <div style="background: white; border-radius: 15px; width: 300px; padding: 20px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s;">
-    <img src="https://m.media-amazon.com/images/I/51imrSup74L._AC_.jpg" alt="Kitchen Gadget" style="width: 100%; height: 220px; object-fit: contain; border-radius: 10px;">
-    <h3 style="color: #222; font-size: 1.25rem; margin: 15px 0 10px;">Smart Kitchen Organizer</h3>
-    <p style="color: #777; font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">Maximize your space with this viral storage solution for a clean and aesthetic kitchen.</p>
-    <a href="https://amzn.to/4aTlV7g" target="_blank" style="display: inline-block; background: #FF9900; color: #fff; padding: 12px 25px; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Check Price on Amazon</a>
-  </div>
+    </div>
 
-  <div style="background: white; border-radius: 15px; width: 300px; padding: 20px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s;">
-    <img src="https://m.media-amazon.com/images/I/61jibW8kmHL._AC_SL1000_.jpg" alt="Home Tool" style="width: 100%; height: 220px; object-fit: contain; border-radius: 10px;">
-    <h3 style="color: #222; font-size: 1.25rem; margin: 15px 0 10px;">Precision Laser Level</h3>
-    <p style="color: #777; font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">The perfect DIY companion for hanging pictures and home renovations with ease.</p>
-    <a href="https://amzn.to/3Yv73EL" target="_blank" style="display: inline-block; background: #FF9900; color: #fff; padding: 12px 25px; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Check Price on Amazon</a>
-  </div>
-
-  <div style="background: white; border-radius: 15px; width: 300px; padding: 20px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s;">
-    <img src="https://m.media-amazon.com/images/I/610SRuSMGJL._AC_SL1500_.jpg" alt="Beauty Gadget" style="width: 100%; height: 220px; object-fit: contain; border-radius: 10px;">
-    <h3 style="color: #222; font-size: 1.25rem; margin: 15px 0 10px;">Scalp Massager Brush</h3>
-    <p style="color: #777; font-size: 0.95rem; line-height: 1.5; margin-bottom: 20px;">Improve hair health and relax with this simple but effective shower essential.</p>
-    <a href="https://amzn.to/49Ag8B7" target="_blank" style="display: inline-block; background: #FF9900; color: #fff; padding: 12px 25px; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Check Price on Amazon</a>
-  </div>
-</section>
-
-
-  <section id="kontakt" class="card">
-    <h2>Contact</h2>
-    <p>For collaborations, feel free to reach out:</p>
-    <p><strong>Email:</strong> marketingprodjone@gmail.com</p>
-  </section>
-
+    <section id="kontakt" style="margin-top:50px; background: white; padding: 20px; border-radius: 8px;">
+        <h2>Contact</h2>
+        <p>For collaborations, feel free to reach out:</p>
+        <p><strong>Email:</strong> marketingprodjone@gmail.com</p>
+    </section>
 </div>
 
 <footer>
-  <p>© 2026 MarketingProdjone | Affiliate web page</p>
+    <p>&copy; 2026 MarketingProdjone | Affiliate web page</p>
 </footer>
 
 </body>
 </html>
+
