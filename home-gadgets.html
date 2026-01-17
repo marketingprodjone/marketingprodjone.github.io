@@ -7,47 +7,47 @@
     <style>
         body { font-family: Arial, sans-serif; margin: 0; background: #f7f7f7; color: #333; }
         header { background: #111; color: #fff; padding: 20px; text-align: center; }
-        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        .container { max-width: 1100px; margin: auto; padding: 20px; }
+        nav a { color: #fff; text-decoration: none; font-weight: bold; }
+        .container { max-width: 1200px; margin: auto; padding: 20px; text-align: center; }
         .back-link { display: inline-block; margin-bottom: 20px; color: #e60023; text-decoration: none; font-weight: bold; }
         
-        /* Mreža proizvoda */
+        /* Poboljšana mreža za puno artikala */
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
         }
         
         .product-card {
             background: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            text-align: center;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         
         .product-card img {
             width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 15px;
+            height: 200px; /* Fiksna visina slike da sve bude ravno */
+            object-fit: contain; /* Da se slike ne rastežu */
+            border-radius: 8px;
+            margin-bottom: 10px;
         }
-        
-        .product-card h3 { margin: 10px 0; font-size: 1.1rem; }
-        .product-card p { color: #666; font-size: 0.9rem; margin-bottom: 20px; }
         
         .amazon-btn {
-            display: inline-block;
+            display: block;
             background: #FF9900;
             color: white;
-            padding: 10px 20px;
+            padding: 10px;
             text-decoration: none;
-            border-radius: 25px;
+            border-radius: 20px;
             font-weight: bold;
-            transition: background 0.3s;
+            margin-top: 10px;
         }
         
-        .amazon-btn:hover { background: #e68a00; }
         footer { background: #111; color: #fff; text-align: center; padding: 15px; margin-top: 40px; }
     </style>
 </head>
@@ -55,36 +55,44 @@
 
 <header>
     <h1>MarketingProdjone</h1>
-    <nav>
-        <a href="index.html">Home</a>
-    </nav>
+    <nav><a href="index.html">Home</a></nav>
 </header>
 
 <div class="container">
     <a href="index.html" class="back-link">← Back to All Boards</a>
-    <h2>Modern Home Gadgets</h2>
+    <h2>Modern Home Gadgets (17 Pins)</h2>
     
     <div class="products-grid">
         
         <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/71BDp9-RWKL._AC_SL1500_.jpg" alt="Kitchen Organizer">
+            <img src="https://m.media-amazon.com/images/I/71BDp9-RWKL._AC_SL1500_.jpg" alt="Gadget 1">
             <h3>Smart Kitchen Organizer</h3>
-            <p>Maximize your space with this viral storage solution for a clean and aesthetic kitchen.</p>
-            <a href="https://amzn.to/3P2pE7j" class="amazon-btn" target="_blank">Check Price on Amazon</a>
+            <a href="LINK_1" class="amazon-btn" target="_blank">Check Price</a>
         </div>
 
         <div class="product-card">
-            <img src="https://m.media-amazon.com/images/I/61S8n-559YL._AC_SL1500_.jpg" alt="Home Gadget">
-            <h3>Modern Home Gadget</h3>
-            <p>Discover how this essential tool can simplify your daily routine and upgrade your home.</p>
-            <a href="https://amzn.to/3P2pE7j" class="amazon-btn" target="_blank">Check Price on Amazon</a>
+            <img src="https://m.media-amazon.com/images/I/61S8n-559YL._AC_SL1500_.jpg" alt="Gadget 2">
+            <h3>Precision Laser Level</h3>
+            <a href="LINK_2" class="amazon-btn" target="_blank">Check Price</a>
         </div>
 
-    </div>
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/71W8S7tXpLL._AC_SL1500_.jpg" alt="Gadget 3">
+            <h3>Electric Vegetable Chopper</h3>
+            <a href="LINK_3" class="amazon-btn" target="_blank">Check Price</a>
+        </div>
+
+        <div class="product-card">
+            <img src="https://m.media-amazon.com/images/I/61+67V3W99L._AC_SL1500_.jpg" alt="Gadget 4">
+            <h3>Automatic Soap Dispenser</h3>
+            <a href="LINK_4" class="amazon-btn" target="_blank">Check Price</a>
+        </div>
+
+        </div>
 </div>
 
 <footer>
-    <p>&copy; 2026 MarketingProdjone | Affiliate web page</p>
+    <p>&copy; 2026 MarketingProdjone</p>
 </footer>
 
 </body>
