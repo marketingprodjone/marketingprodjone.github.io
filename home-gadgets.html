@@ -4,41 +4,36 @@
     <meta charset="UTF-8">
     <title>Modern Home Gadgets</title>
     <style>
-        body { font-family: sans-serif; margin: 0; background: #f4f4f4; text-align: center; }
-        .hero { width: 100%; height: 300px; object-fit: cover; background: #333; }
-        .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
-        .card { background: white; width: 280px; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-decoration: none; color: black; }
-        .card img { width: 100%; height: 300px; object-fit: cover; }
-        .info { padding: 15px; }
-        .btn { background: #FF9900; color: white; padding: 10px; border-radius: 5px; font-weight: bold; }
+        body { font-family: sans-serif; margin: 0; padding: 20px; background: white; text-align: center; }
+        .back { display: block; margin-bottom: 20px; color: red; font-weight: bold; text-decoration: none; }
+        .grid { display: flex; flex-direction: column; align-items: center; gap: 40px; }
+        .item { width: 100%; max-width: 400px; border: 1px solid #ddd; padding: 15px; border-radius: 10px; }
+        img { width: 100%; border-radius: 5px; }
+        .btn { display: block; background: #FF9900; color: white; padding: 15px; margin-top: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800" class="hero">
-
+    <a href="index.html" class="back">← NAZAD NA POČETNU</a>
     <h1>Modern Home Gadgets</h1>
-    <a href="index.html" style="color: red; font-weight: bold;">← Nazad na početnu</a>
 
     <div class="grid">
-        
-        <a href="TVOJ_AMAZON_LINK_OVDJE" target="_blank" class="card">
+        <div class="item">
+            <p><strong>Ploča Naslovnica:</strong></p>
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=500">
+        </div>
+
+        <div class="item">
             <img src="https://m.media-amazon.com/images/I/71s6H6X89FL._AC_SL1500_.jpg">
-            <div class="info">
-                <h3>Electric Spin Scrubber</h3>
-                <div class="btn">View on Amazon</div>
-            </div>
-        </a>
+            <a href="https://www.amazon.com" target="_blank" class="btn">KUPI NA AMAZONU</a>
+        </div>
 
-        <a href="TVOJ_AMAZON_LINK_OVDJE" target="_blank" class="card">
+        <div class="item">
             <img src="https://m.media-amazon.com/images/I/61S9AtY5SXL._AC_SL1500_.jpg">
-            <div class="info">
-                <h3>Smart Trash Can</h3>
-                <div class="btn">View on Amazon</div>
-            </div>
-        </a>
-
+            <a href="https://www.amazon.com" target="_blank" class="btn">KUPI NA AMAZONU</a>
+        </div>
     </div>
 
 </body>
 </html>
+
