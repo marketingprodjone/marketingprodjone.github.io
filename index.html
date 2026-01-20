@@ -26,6 +26,9 @@
             padding: 2rem 1rem;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         nav { margin-top: 15px; }
@@ -36,6 +39,7 @@
             margin: 0 15px;
             font-weight: bold;
             font-size: 1.1rem;
+            transition: color 0.3s;
         }
 
         nav a:hover { color: var(--primary-color); }
@@ -64,17 +68,21 @@
             text-decoration: none;
             color: inherit;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: block;
         }
 
-        .board-card:hover { transform: translateY(-5px); }
+        .board-card:hover { 
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
 
         .board-image {
             width: 100%;
             height: 200px;
             object-fit: cover;
             display: block;
+            background-color: #eee;
         }
 
         .board-content {
@@ -137,4 +145,22 @@
             </div>
         </a>
 
-        
+        <a href="https://www.pinterest.com/marketingprodjone1981/viral-kitchen-gadgets/" target="_blank" class="board-card">
+            <img src="https://i.pinimg.com/736x/c6/4a/01/c64a01a719b7433a01cc9b53b72d76d4.jpg" alt="Kitchen" class="board-image">
+            <div class="board-content">
+                <h3>Viral Kitchen Gadgets</h3>
+                <p>4 pina • Kuhinjski alati</p>
+                <span class="explore-btn">ISTRAŽI KOLEKCIJU →</span>
+            </div>
+        </a>
+
+        <a href="https://www.pinterest.com/marketingprodjone1981/modern-home-gadgets/" target="_blank" class="board-card">
+            <img src="https://i.pinimg.com/736x/b6/b8/dd/b6b8ddfaa08e33753e877833e8b8ec6c.jpg" alt="Home" class="board-image">
+            <div class="board-content">
+                <h3>Modern Home Gadgets</h3>
+                <p>3 pina • Pametni dom</p>
+                <span class="explore-btn">ISTRAŽI KOLEKCIJU →</span>
+            </div>
+        </a>
+
+        <a href="
