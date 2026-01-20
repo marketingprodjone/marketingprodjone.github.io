@@ -22,13 +22,18 @@
 
         header {
             background-color: white;
-            color: var(--primary-color);
             padding: 2rem 1rem;
             text-align: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 1.8rem;
         }
 
         nav { margin-top: 15px; }
@@ -68,26 +73,24 @@
             text-decoration: none;
             color: inherit;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: block;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
-        .board-card:hover { 
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-        }
+        .board-card:hover { transform: translateY(-5px); }
 
         .board-image {
             width: 100%;
             height: 200px;
             object-fit: cover;
             display: block;
-            background-color: #eee;
         }
 
         .board-content {
             padding: 20px;
             text-align: center;
+            flex-grow: 1;
         }
 
         .board-content h3 { margin: 0 0 10px 0; font-size: 1.2rem; }
@@ -114,53 +117,4 @@
 <header>
     <h1>MarketingProdjone</h1>
     <nav>
-        <a href="https://marketingprodjone.github.io/">Home</a>
-        <a href="https://www.instagram.com/mark_etingprodjone?igsh=cXRkMzhrbmJob253" target="_blank">Contact</a>
-    </nav>
-</header>
-
-<div class="container">
-    <div class="welcome-section">
-        <h2>Welcome to My Boards</h2>
-        <p>Explore curated products inspired by my Pinterest collections.</p>
-    </div>
-
-    <div class="board-grid">
-        
-        <a href="https://www.pinterest.com/marketingprodjone1981/beauty-personal-care/" target="_blank" class="board-card">
-            <img src="https://i.pinimg.com/736x/df/0f/e1/df0fe132304a0d24b7bf22efc94cf67f.jpg" alt="Beauty" class="board-image">
-            <div class="board-content">
-                <h3>Beauty & Personal Care</h3>
-                <p>7 pinova • Njega i ljepota</p>
-                <span class="explore-btn">ISTRAŽI KOLEKCIJU →</span>
-            </div>
-        </a>
-
-        <a href="https://www.pinterest.com/marketingprodjone1981/amazon-must-have-in-2026/" target="_blank" class="board-card">
-            <img src="https://i.pinimg.com/736x/21/e4/f0/21e4f0a200741643c16a3038676a08f5.jpg" alt="Amazon" class="board-image">
-            <div class="board-content">
-                <h3>Amazon Must Have in 2026</h3>
-                <p>5 pinova • Hitovi godine</p>
-                <span class="explore-btn">ISTRAŽI KOLEKCIJU →</span>
-            </div>
-        </a>
-
-        <a href="https://www.pinterest.com/marketingprodjone1981/viral-kitchen-gadgets/" target="_blank" class="board-card">
-            <img src="https://i.pinimg.com/736x/c6/4a/01/c64a01a719b7433a01cc9b53b72d76d4.jpg" alt="Kitchen" class="board-image">
-            <div class="board-content">
-                <h3>Viral Kitchen Gadgets</h3>
-                <p>4 pina • Kuhinjski alati</p>
-                <span class="explore-btn">ISTRAŽI KOLEKCIJU →</span>
-            </div>
-        </a>
-
-        <a href="https://www.pinterest.com/marketingprodjone1981/modern-home-gadgets/" target="_blank" class="board-card">
-            <img src="https://i.pinimg.com/736x/b6/b8/dd/b6b8ddfaa08e33753e877833e8b8ec6c.jpg" alt="Home" class="board-image">
-            <div class="board-content">
-                <h3>Modern Home Gadgets</h3>
-                <p>3 pina • Pametni dom</p>
-                <span class="explore-btn">ISTRAŽI KOLEKCIJU →</span>
-            </div>
-        </a>
-
-        <a href="
+        <a href="https://marketingprod
