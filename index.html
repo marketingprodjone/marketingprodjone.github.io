@@ -3,66 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MarketingProdjone | My Pinterest Boards</title>
+    <title>MarketingProdjone | Pinterest Shop</title>
     <style>
         :root {
             --primary-color: #e60023;
-            --bg-color: #f0f0f2;
+            --bg-color: #f4f4f4;
             --card-bg: #ffffff;
-            --text-main: #333333;
-            --text-muted: #666666;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+            --text-color: #333;
         }
 
         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
         }
 
         header {
-            background: white;
-            padding: 1.5rem 5%;
+            background-color: white;
+            color: var(--primary-color);
+            padding: 2rem 1rem;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
-        header h1 {
-            color: var(--primary-color);
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
+        nav { margin-top: 15px; }
 
-        header nav a {
-            margin: 0 15px;
+        nav a {
+            color: #333;
             text-decoration: none;
-            color: var(--text-main);
-            font-weight: 600;
-            transition: color 0.3s;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
         }
 
-        header nav a:hover {
-            color: var(--primary-color);
-        }
+        nav a:hover { color: var(--primary-color); }
 
         .container {
             max-width: 1200px;
-            margin: 2rem auto;
+            margin: 40px auto;
             padding: 0 20px;
         }
 
         .welcome-section {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 40px;
         }
 
         .board-grid {
@@ -73,59 +59,44 @@
 
         .board-card {
             background: var(--card-bg);
-            border-radius: 16px;
+            border-radius: 15px;
             overflow: hidden;
             text-decoration: none;
             color: inherit;
-            transition: transform 0.3s, box-shadow 0.3s;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            display: block;
         }
 
-        .board-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 20px rgba(0,0,0,0.1);
-        }
+        .board-card:hover { transform: translateY(-5px); }
 
         .board-image {
             width: 100%;
             height: 200px;
             object-fit: cover;
-            background-color: #eee;
+            display: block;
         }
 
         .board-content {
-            padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            padding: 20px;
+            text-align: center;
         }
 
-        .board-content h3 {
-            margin-bottom: 0.5rem;
-            font-size: 1.25rem;
-        }
-
-        .board-content p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
+        .board-content h3 { margin: 0 0 10px 0; font-size: 1.2rem; }
+        .board-content p { font-size: 0.9rem; color: #666; margin: 0; }
 
         .explore-btn {
+            display: inline-block;
+            margin-top: 15px;
             color: var(--primary-color);
-            font-weight: 700;
+            font-weight: bold;
             font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
         footer {
             text-align: center;
-            padding: 3rem 1rem;
-            color: var(--text-muted);
+            padding: 40px;
+            color: #888;
             font-size: 0.9rem;
         }
     </style>
@@ -135,7 +106,7 @@
 <header>
     <h1>MarketingProdjone</h1>
     <nav>
-        <a href="index.html">Home</a>
+        <a href="https://marketingprodjone.github.io/">Home</a>
         <a href="https://www.instagram.com/mark_etingprodjone?igsh=cXRkMzhrbmJob253" target="_blank">Contact</a>
     </nav>
 </header>
@@ -149,83 +120,21 @@
     <div class="board-grid">
         
         <a href="https://www.pinterest.com/marketingprodjone1981/beauty-personal-care/" target="_blank" class="board-card">
-            <img src="https://i.pinimg.com/564x/4b/f1/8b/4bf18b32349e5d61480b0676451a5111.jpg" alt="Beauty" class="board-image">
+            <img src="https://i.pinimg.com/736x/df/0f/e1/df0fe132304a0d24b7bf22efc94cf67f.jpg" alt="Beauty" class="board-image">
             <div class="board-content">
                 <h3>Beauty & Personal Care</h3>
-                <p>7 pins • Njega i ljepota</p>
+                <p>7 pinova • Njega i ljepota</p>
                 <span class="explore-btn">ISTRAŽI KOLEKCIJU →</span>
             </div>
         </a>
 
         <a href="https://www.pinterest.com/marketingprodjone1981/amazon-must-have-in-2026/" target="_blank" class="board-card">
-            <img src="https://i.pinimg.com/564x/0a/66/68/0a6668e4c94264ded-b841-0f0b4b5feace.jpg" alt="Must Have" class="board-image">
+            <img src="https://i.pinimg.com/736x/21/e4/f0/21e4f0a200741643c16a3038676a08f5.jpg" alt="Amazon" class="board-image">
             <div class="board-content">
                 <h3>Amazon Must Have in 2026</h3>
-                <p>5 pins • Hitovi godine</p>
+                <p>5 pinova • Hitovi godine</p>
                 <span class="explore-btn">ISTRAŽI KOLEKCIJU →</span>
             </div>
         </a>
 
-        <a href="https://www.pinterest.com/marketingprodjone1981/viral-kitchen-gadgets/" target="_blank" class="board-card">
-            <img src="https://i.pinimg.com/564x/4a/fd/31/4afd3109a202e86214878a108a108a10.jpg" alt="Kitchen" class="board-image">
-            <div class="board-content">
-                <h3>Viral Kitchen Gadgets</h3>
-                <p>4 pins • Kuhinjski alati</p>
-                <span class="explore-btn">ISTRAŽI KOLEKCIJU →</span>
-            </div>
-        </a>
-
-        <a href="https://www.pinterest.com/marketingprodjone1981/modern-home-gadgets/" target="_blank" class="board-card">
-            <img src="https://i.pinimg.com/564x/a4/0c/84/a40c8410b65673d317058866e4084084.jpg" alt="Home Gadgets" class="board-image">
-            <div class="board-content">
-                <h3>Modern Home Gadgets</h3>
-                <p>3 pins • Pametni dom</p>
-                <span class="explore-btn">ISTRAŽI KOLEKCIJU →</span>
-            </div>
-        </a>
-
-        <a href="https://www.pinterest.com/marketingprodjone1981/fitness-motivation-at-home/" target="_blank" class="board-card">
-            <img src="https://i.pinimg.com/564x/8a/72/0d/8a720d5b1d8d43d096ad7c26c3efe955.jpg" alt="Fitness" class="board-image">
-            <div class="board-content">
-                <h3>Fitness & Home Workout</h3>
-                <p>3 pins • Oprema za vježbanje</p>
-                <span class="explore-btn">ISTRAŽI KOLEKCIJU →</span>
-            </div>
-        </a>
-
-        <a href="https://www.pinterest.com/marketingprodjone1981/health-household/" target="_blank" class="board-card">
-            <img src="https://i.pinimg.com/564x/5a/0a/7b/5a0a7b4587634f5939281a1a1a1a1a1a.jpg" alt="Health" class="board-image">
-            <div class="board-content">
-                <h3>Health & Household</h3>
-                <p>4 pins • Zdravlje i dom</p>
-                <span class="explore-btn">ISTRAŽI KOLEKCIJU →</span>
-            </div>
-        </a>
-
-        <a href="https://www.pinterest.com/marketingprodjone1981/tech-aesthetic-desk-setup/" target="_blank" class="board-card">
-            <img src="https://i.pinimg.com/564x/0b/9d/9e/0b9d9e6027a0808a38b291d34346808a.jpg" alt="Tech" class="board-image">
-            <div class="board-content">
-                <h3>Tech & Aesthetic Desk Setup</h3>
-                <p>4 pins • Tehnologija i estetika</p>
-                <span class="explore-btn">ISTRAŽI KOLEKCIJU →</span>
-            </div>
-        </a>
-
-        <a href="https://www.pinterest.com/marketingprodjone1981/tools-and-home-improvement/" target="_blank" class="board-card">
-            <img src="https://i.pinimg.com/564x/23/91/92/23919280123456789012345678901234.jpg" alt="Tools" class="board-image">
-            <div class="board-content">
-                <h3>Tools and Home Improvement</h3>
-                <p>4 pins • Alati i DIY projekti</p>
-                <span class="explore-btn">ISTRAŽI KOLEKCIJU →</span>
-            </div>
-        </a>
-
-    </div>
-</div>
-
-<footer>
-    <p>&copy; 2026 MarketingProdjone. All rights reserved.</p>
-</footer>
-
-</body>
-</html>
+        
