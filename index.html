@@ -1,47 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MarketingProdjone | Pinterest Boards</title>
+    <title>MarketingProdjone | My Pinterest Boards</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; background: #f7f7f7; color: #333; }
-        header { background: #111; color: #fff; padding: 20px; text-align: center; }
-        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        .container { max-width: 1100px; margin: auto; padding: 20px; }
-        
-        /* Stil za Pinterest mrežu ploča */
-        .boards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            padding: 20px 0;
+        :root {
+            --primary-color: #333;
+            --bg-color: #f4f4f4;
+            --card-bg: #ffffff;
+            --text-color: #333;
         }
-        
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .welcome-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Grid sustav za ploče */
+        .board-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* Stil kartice */
         .board-card {
-            background: white;
-            border-radius: 16px;
+            background: var(--card-bg);
+            border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-decoration: none;
             color: inherit;
-            transition: transform 0.3s;
+            display: block;
         }
-        
-        .board-card:hover { transform: translateY(-5px); }
-        
+
+        .board-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
         .board-image {
             width: 100%;
             height: 200px;
+            background-color: #ddd;
             object-fit: cover;
-            background: #eee;
+            display: block;
         }
-        
-        .board-info { padding: 15px; text-align: left; }
-        .board-info h3 { margin: 0; font-size: 1.2rem; color: #222; }
-        .board-info p { margin: 5px 0 0; color: #777; font-size: 0.9rem; }
 
-        footer { background: #111; color: #fff; text-align: center; padding: 15px; margin-top: 40px; }
+        .board-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .board-content h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .board-content p {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0;
+        }
+
+        .explore-btn {
+            display: inline-block;
+            margin-top: 15px;
+            color: #bd081c; /* Pinterest crvena */
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #888;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -49,120 +118,70 @@
 <header>
     <h1>MarketingProdjone</h1>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="#kontakt">Contact</a>
+        <a href="#">Home</a>
+        <a href="mailto:tvoj-email@gmail.com">Contact</a>
     </nav>
 </header>
 
 <div class="container">
-    <section id="welcome">
+    <div class="welcome-section">
         <h2>Welcome to My Boards</h2>
         <p>Explore curated products inspired by my Pinterest collections.</p>
-    </section>
+    </div>
 
-    <div class="boards-grid">
+    <div class="board-grid">
         
-        <a href="home-gadgets.html" class="board-card">
-            <img src="https://m.media-amazon.com/images/I/71BDp9-RWKL._AC_SL1500_.jpg" class="board-image" alt="Home Gadgets">
-            <div class="board-info">
+        <a href="https://www.pinterest.com/marketingprodjone1981/modern-home-gadgets/" target="_blank" class="board-card">
+            <img src="https://s.pinimg.com/images/user/default_280.png" alt="Home Gadgets" class="board-image">
+            <div class="board-content">
                 <h3>Modern Home Gadgets</h3>
                 <p>17 pins • Explore items</p>
+                <span class="explore-btn">VIEW ON PINTEREST →</span>
             </div>
         </a>
 
-        <a href="fitness.html" class="board-card">
-            <img src="https://m.media-amazon.com/images/I/51imrSup74L._AC_.jpg" class="board-image" alt="Fitness">
-            <div class="board-info">
-                <h3>Viral Fitness Essentials</h3>
-                <p>3 pins • Explore items</p>
-            </div>
-        </a>
-
-        <a href="beauty.html" class="board-card">
-            <img src="https://m.media-amazon.com/images/I/610SRuSM6JL._AC_SL1500_.jpg" class="board-image" alt="Beauty">
-            <div class="board-info">
+        <a href="https://www.pinterest.com/marketingprodjone1981/beauty-personal-care/" target="_blank" class="board-card">
+            <img src="https://s.pinimg.com/images/user/default_280.png" alt="Beauty" class="board-image">
+            <div class="board-content">
                 <h3>Beauty & Personal Care</h3>
                 <p>3 pins • Explore items</p>
+                <span class="explore-btn">VIEW ON PINTEREST →</span>
             </div>
         </a>
 
-        <a href="phones.html" class="board-card">
-            <img src="https://m.media-amazon.com/images/I/61jiH8WkmHL._AC_SL1000_.jpg" class="board-image" alt="Phones">
-            <div class="board-info">
-                <h3>Amazon Cell Phones</h3>
-                <p>1 pin • Explore items</p>
-            </div>
-        </a>
-<a href="must-have.html" class="board-card">  <a href="health.html" class="board-card">
-            <img src="https://m.media-amazon.com/images/I/81v7iA5uD9L._AC_SL1500_.jpg" class="board-image" alt="Health">
-            <div class="board-info">
-                <h3>Health & Household</h3>
-                <p>1 pin • Explore items</p>
-            </div>
-        </a>
-
-        <a href="handbags.html" class="board-card">
-            <img src="https://m.media-amazon.com/images/I/71G1Y0fAitL._AC_SL1500_.jpg" class="board-image" alt="Handbags">
-            <div class="board-info">
-                <h3>Handbags & Wallets</h3>
-                <p>1 pin • Explore items</p>
-            </div>
-        </a>
-
-        <a href="kitchen.html" class="board-card">
-            <img src="https://m.media-amazon.com/images/I/71W8S7tXpLL._AC_SL1500_.jpg" class="board-image" alt="Kitchen">
-            <div class="board-info">
+        <a href="https://www.pinterest.com/marketingprodjone1981/viral-kitchen-gadgets/" target="_blank" class="board-card">
+            <img src="https://s.pinimg.com/images/user/default_280.png" alt="Kitchen" class="board-image">
+            <div class="board-content">
                 <h3>Viral Kitchen Gadgets</h3>
-                <p>2 pins • Explore items</p>
+                <p>4 pins • Explore items</p>
+                <span class="explore-btn">VIEW ON PINTEREST →</span>
             </div>
         </a>
 
+        <a href="https://www.pinterest.com/marketingprodjone1981/health-household/" target="_blank" class="board-card">
+            <img src="https://s.pinimg.com/images/user/default_280.png" alt="Health" class="board-image">
+            <div class="board-content">
+                <h3>Health & Household</h3>
+                <p>4 pins • Explore items</p>
+                <span class="explore-btn">VIEW ON PINTEREST →</span>
+            </div>
+        </a>
 
-    <img src="https://m.media-amazon.com/images/I/61S8n-559YL._AC_SL1500_.jpg" class="board-image" alt="Must Have">
-    <div class="board-info">
-        <h3>Amazon Must Have in 2026</h3>
-        <p>3 pins • Explore items</p>
-    </div>
-</a>
-
-<a href="kitchen.html" class="board-card">
-    <img src="https://m.media-amazon.com/images/I/71W8S7tXpLL._AC_SL1500_.jpg" class="board-image" alt="Kitchen Gadgets">
-    <div class="board-info">
-        <h3>Viral Kitchen Gadgets</h3>
-        <p>2 pins • Explore items</p>
-    </div>
-</a>
-
-<a href="health.html" class="board-card">
-    <img src="https://m.media-amazon.com/images/I/71R2o58lS2L._AC_SL1500_.jpg" class="board-image" alt="Health">
-    <div class="board-info">
-        <h3>Health & Household</h3>
-        <p>1 pin • Explore items</p>
-    </div>
-</a>
-
-<a href="handbags.html" class="board-card">
-    <img src="https://m.media-amazon.com/images/I/71G1Y0fAitL._AC_SL1500_.jpg" class="board-image" alt="Handbags">
-    <div class="board-info">
-        <h3>Handbags & Wallets</h3>
-        <p>1 pin • Explore items</p>
-    </div>
-</a>
-
+        <a href="https://www.pinterest.com/marketingprodjone1981/fitness-motivation-at-home/" target="_blank" class="board-card">
+            <img src="https://s.pinimg.com/images/user/default_280.png" alt="Fitness" class="board-image">
+            <div class="board-content">
+                <h3>Viral Fitness Essentials</h3>
+                <p>3 pins • Explore items</p>
+                <span class="explore-btn">VIEW ON PINTEREST →</span>
+            </div>
+        </a>
 
     </div>
-
-    <section id="kontakt" style="margin-top:50px; background: white; padding: 20px; border-radius: 8px;">
-        <h2>Contact</h2>
-        <p>For collaborations, feel free to reach out:</p>
-        <p><strong>Email:</strong> marketingprodjone@gmail.com</p>
-    </section>
 </div>
 
 <footer>
-    <p>&copy; 2026 MarketingProdjone | Affiliate web page</p>
+    <p>&copy; 2024 MarketingProdjone. All rights reserved.</p>
 </footer>
 
 </body>
 </html>
-
