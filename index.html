@@ -1,54 +1,254 @@
-<div class="board-grid">
-    <a href="https://www.pinterest.com/marketingprodjone1981/tech-aesthetic-desk-setup/" target="_blank" class="board-card">
-        <div class="image-container">
-            <img src="https://i.pinimg.com/736x/3b/f2/b2/3bf2b2b276980a934f75ac792863e94dd6c.jpg" alt="Tech" class="board-image">
-        </div>
-        <div class="board-content">
-            <h3>Must-Have Amazon Tech: Modern Gadgets & Setups</h3>
-            <p>36 pinova • Workspaces that inspire creativity.</p>
-            <div class="card-footer">
-                <span class="explore-text">VIEW BOARD ➔</span>
-            </div>
-        </div>
-    </a>
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketingProdjone | Pinterest Snaps</title>
+    <style>
+        :root {
+            --primary-color: #e60023;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #111111;
+            --text-muted: #5f6368;
+            --shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-hover: 0 12px 24px rgba(0,0,0,0.15);
+        }
 
-    <a href="https://www.pinterest.com/marketingprodjone1981/beauty-personal-care/" target="_blank" class="board-card">
-        <div class="image-container">
-            <img src="https://i.pinimg.com/736x/df/0f/e1/df0fe133d43dd24b7bf22efc94cf6f7f.jpg" alt="Beauty" class="board-image">
-        </div>
-        <div class="board-content">
-            <h3>Beauty & Personal Care</h3>
-            <p>18 pinova • Best of skincare and beauty gadgets.</p>
-            <div class="card-footer">
-                <span class="explore-text">VIEW BOARD ➔</span>
-            </div>
-        </div>
-    </a>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
 
-    <a href="https://www.pinterest.com/marketingprodjone1981/fitness-motivation-at-home/" target="_blank" class="board-card">
-        <div class="image-container">
-            <img src="https://i.pinimg.com/736x/21/16/29/211629b88ac4c8b1bfaa283f363e4083.jpg" alt="Fitness" class="board-image">
-        </div>
-        <div class="board-content">
-            <h3>Exercise & Fitness 2026</h3>
-            <p>4 pina • Stay active with the best home gear.</p>
-            <div class="card-footer">
-                <span class="explore-text">VIEW BOARD ➔</span>
-            </div>
-        </div>
-    </a>
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.5;
+        }
 
-    <a href="https://www.pinterest.com/marketingprodjone1981/modern-home-gadgets/" target="_blank" class="board-card">
-        <div class="image-container">
-            <img src="https://i.pinimg.com/736x/bf/68/dd/bf68ddafae889e833f53c677e31e85cc.jpg" alt="Home" class="board-image">
-        </div>
-        <div class="board-content">
-            <h3>Must-Have Home Gadgets in 2026</h3>
-            <p>19 pinova • Essential electronics for your home.</p>
-            <div class="card-footer">
-                <span class="explore-text">VIEW BOARD ➔</span>
+        header {
+            background: white;
+            padding: 1.2rem 5%;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            font-size: 1.7rem;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s;
+            padding-bottom: 4px;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .container {
+            max-width: 1250px;
+            margin: 3rem auto;
+            padding: 0 20px;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .hero-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #202124;
+        }
+
+        .hero-section p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .board-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .board-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow);
+            height: 100%;
+        }
+
+        .board-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .board-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .board-card:hover .board-image {
+            transform: scale(1.08);
+        }
+
+        .board-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .board-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            color: #202124;
+        }
+
+        .board-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .explore-text {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        footer {
+            background: white;
+            margin-top: 5rem;
+            padding: 4rem 1rem;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.4rem; }
+            .hero-section h2 { font-size: 1.7rem; }
+            .board-grid { gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MarketingProdjone</h1>
+    <nav>
+        <a href="https://marketingprodjone.github.io/">Home</a>
+        <a href="https://www.instagram.com/mark_etingprodjone?igsh=cXR8dHzrbmJob253" target="_blank">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="hero-section">
+        <h2>My Pinterest Collections</h2>
+        <p>Discover the best products from my curated boards.</p>
+    </div>
+
+    <div class="board-grid">
+        <a href="https://www.pinterest.com/marketingprodjone1981/tech-aesthetic-desk-setup/" target="_blank" class="board-card">
+            <div class="image-container">
+                <img src="https://i.pinimg.com/736x/3b/f2/b2/3bf2b2b276980a934f75ac792863e94dd6c.jpg" alt="Tech" class="board-image">
             </div>
-        </div>
-    </a>
-</div>
+            <div class="board-content">
+                <h3>Must-Have Amazon Tech: Modern Gadgets & Setups</h3>
+                <p>36 pinova • Workspaces that inspire creativity.</p>
+                <div class="card-footer">
+                    <span class="explore-text">VIEW BOARD ➔</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.pinterest.com/marketingprodjone1981/beauty-personal-care/" target="_blank" class="board-card">
+            <div class="image-container">
+                <img src="https://i.pinimg.com/736x/df/0f/e1/df0fe133d43dd24b7bf22efc94cf6f7f.jpg" alt="Beauty" class="board-image">
+            </div>
+            <div class="board-content">
+                <h3>Beauty & Personal Care</h3>
+                <p>18 pinova • Best of skincare and beauty gadgets.</p>
+                <div class="card-footer">
+                    <span class="explore-text">VIEW BOARD ➔</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.pinterest.com/marketingprodjone1981/fitness-motivation-at-home/" target="_blank" class="board-card">
+            <div class="image-container">
+                <img src="https://i.pinimg.com/736x/21/16/29/211629b88ac4c8b1bfaa283f363e4083.jpg" alt="Fitness" class="board-image">
+            </div>
+            <div class="board-content">
+                <h3>Exercise & Fitness 2026</h3>
+                <p>4 pina • Stay active with the best home gear.</p>
+                <div class="card-footer">
+                    <span class="explore-text">VIEW BOARD ➔</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.pinterest.com/marketingprodjone1981/modern-home-gadgets/" target="_blank" class="board-card">
+            <div class="image-container">
+                <img src="https://i.pinimg.com/736x/bf/68/dd/bf68ddafae889e833f53c677e31e85cc.jpg" alt="Home" class="board-image">
+            </div>
+            <div class="board-content">
+                <h3>Must-Have Home Gadgets in 2026</h3>
+                <p>19 pinova • Essential electronics for your home.</p>
+                <div class="card-footer">
+                    <span
 
