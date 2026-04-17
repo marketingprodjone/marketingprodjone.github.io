@@ -15,7 +15,7 @@
             --shadow-hover: 0 12px 24px rgba(0,0,0,0.15);
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Arial, sans-serif; }
         body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.5; }
 
         header {
@@ -34,44 +34,37 @@
         nav a { text-decoration: none; color: var(--text-main); font-weight: 600; transition: 0.2s; padding-bottom: 4px; border-bottom: 2px solid transparent; }
         nav a:hover { color: var(--primary-color); border-bottom: 2px solid var(--primary-color); }
 
-        .container { max-width: 1250px; margin: 3rem auto; padding: 0 20px; }
+        .container { max-width: 1200px; margin: 3rem auto; padding: 0 20px; }
         .hero-section { text-align: center; margin-bottom: 4rem; }
         .hero-section h2 { font-size: 2.2rem; margin-bottom: 10px; }
 
-        .board-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
+        .board-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 25px; }
 
         .board-card {
             background: var(--card-bg);
-            border-radius: 20px;
+            border-radius: 16px;
             overflow: hidden;
             text-decoration: none;
             color: inherit;
-            transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: 0.3s ease;
             display: flex;
             flex-direction: column;
             box-shadow: var(--shadow);
             height: 100%;
         }
 
-        .board-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-hover); }
+        .board-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
 
-        .image-container { width: 100%; height: 220px; overflow: hidden; background-color: #f0f0f0; }
-        .board-image { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-        .board-card:hover .board-image { transform: scale(1.08); }
+        .image-container { width: 100%; height: 200px; overflow: hidden; background-color: #e9ecef; }
+        .board-image { width: 100%; height: 100%; object-fit: cover; }
 
-        .board-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
-        .board-content h3 { font-size: 1.2rem; margin-bottom: 8px; color: #202124; }
-        .board-content p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .board-content { padding: 1.2rem; flex-grow: 1; }
+        .board-content h3 { font-size: 1.1rem; margin-bottom: 8px; color: #111; }
+        .board-content p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; }
 
-        .card-footer { margin-top: auto; display: flex; align-items: center; justify-content: space-between; }
-        .explore-text { color: var(--primary-color); font-weight: 700; font-size: 0.9rem; }
+        .explore-text { color: var(--primary-color); font-weight: 700; font-size: 0.85rem; }
 
-        footer { background: white; margin-top: 5rem; padding: 3rem 1rem; text-align: center; border-top: 1px solid #eee; }
-
-        @media (max-width: 600px) {
-            header h1 { font-size: 1.4rem; }
-            .hero-section h2 { font-size: 1.7rem; }
-        }
+        footer { background: white; margin-top: 4rem; padding: 2rem; text-align: center; border-top: 1px solid #eee; }
     </style>
 </head>
 <body>
@@ -80,14 +73,14 @@
     <h1>MarketingProdjone</h1>
     <nav>
         <a href="/">Početna</a>
-        <a href="https://www.instagram.com/mark_etingprodjone" target="_blank">Kontakt</a>
+        <a href="https://www.instagram.com/mark_etingprodjone" target="_blank">Instagram</a>
     </nav>
 </header>
 
 <div class="container">
     <div class="hero-section">
-        <h2>Moje Pinterest kolekcije</h2>
-        <p>Otkrijte najbolje proizvode s mojih odabranih ploča.</p>
+        <h2>Pinterest Collections</h2>
+        <p>Curated products for your lifestyle.</p>
     </div>
 
     <div class="board-grid">
@@ -97,8 +90,8 @@
             </div>
             <div class="board-content">
                 <h3>Must-Have Amazon Tech</h3>
-                <p>36 pinova • Radni prostori koji inspiriraju.</p>
-                <div class="card-footer"><span class="explore-text">VIEW BOARD ➔</span></div>
+                <p>36 pinova • Desk setups & gadgets.</p>
+                <span class="explore-text">POSETI PLOČU ➔</span>
             </div>
         </a>
 
@@ -108,19 +101,19 @@
             </div>
             <div class="board-content">
                 <h3>Beauty & Personal Care</h3>
-                <p>18 pinova • Najbolje od kozmetike.</p>
-                <div class="card-footer"><span class="explore-text">VIEW BOARD ➔</span></div>
+                <p>18 pinova • Skincare & beauty tech.</p>
+                <span class="explore-text">POSETI PLOČU ➔</span>
             </div>
         </a>
 
         <a href="https://www.pinterest.com/marketingprodjone1981/fitness-motivation-at-home/" target="_blank" class="board-card">
             <div class="image-container">
-                <img src="fitness motivation.jpg" alt="Fitness" class="board-image">
+                <img src="fitness%20motivation.jpg" alt="Fitness" class="board-image">
             </div>
             <div class="board-content">
                 <h3>Exercise & Fitness 2026</h3>
-                <p>4 pina • Ostanite aktivni uz vrhunsku opremu.</p>
-                <div class="card-footer"><span class="explore-text">VIEW BOARD ➔</span></div>
+                <p>4 pina • Home workout essentials.</p>
+                <span class="explore-text">POSETI PLOČU ➔</span>
             </div>
         </a>
 
@@ -130,15 +123,15 @@
             </div>
             <div class="board-content">
                 <h3>Must-Have Home Gadgets</h3>
-                <p>19 pinova • Moderni gadgeti za svaki dom.</p>
-                <div class="card-footer"><span class="explore-text">VIEW BOARD ➔</span></div>
+                <p>19 pinova • Smart home solutions.</p>
+                <span class="explore-text">POSETI PLOČU ➔</span>
             </div>
         </a>
     </div>
 </div>
 
 <footer>
-    <p>&copy; 2026 MarketingProdjone. Sva prava pridržana.</p>
+    <p>&copy; 2026 MarketingProdjone</p>
 </footer>
 
 </body>
