@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MarketingProdjone | Pinterest Snaps</title>
     <style>
-        /* SVEUKUPNI STIL ZA STRANICU */
         :root {
             --primary-color: #e60023;
             --bg-color: #f8f9fa;
@@ -16,18 +15,8 @@
             --shadow-hover: 0 12px 24px rgba(0,0,0,0.15);
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.5;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.5; }
 
         header {
             background: white;
@@ -39,62 +28,17 @@
             z-index: 1000;
         }
 
-        header h1 {
-            color: var(--primary-color);
-            font-size: 1.7rem;
-            letter-spacing: -1px;
-            margin-bottom: 10px;
-        }
+        header h1 { color: var(--primary-color); font-size: 1.7rem; margin-bottom: 10px; }
 
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-        }
+        nav { display: flex; justify-content: center; gap: 25px; }
+        nav a { text-decoration: none; color: var(--text-main); font-weight: 600; transition: 0.2s; padding-bottom: 4px; border-bottom: 2px solid transparent; }
+        nav a:hover { color: var(--primary-color); border-bottom: 2px solid var(--primary-color); }
 
-        nav a {
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.2s;
-            padding-bottom: 4px;
-            border-bottom: 2px solid transparent;
-        }
+        .container { max-width: 1250px; margin: 3rem auto; padding: 0 20px; }
+        .hero-section { text-align: center; margin-bottom: 4rem; }
+        .hero-section h2 { font-size: 2.2rem; margin-bottom: 10px; }
 
-        nav a:hover {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-        }
-
-        .container {
-            max-width: 1250px;
-            margin: 3rem auto;
-            padding: 0 20px;
-        }
-
-        .hero-section {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .hero-section h2 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-            color: #202124;
-        }
-
-        .hero-section p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-        }
-
-        /* GRID SUSTAV ZA KARTICE */
-        .board-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-        }
+        .board-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
 
         .board-card {
             background: var(--card-bg);
@@ -102,91 +46,31 @@
             overflow: hidden;
             text-decoration: none;
             color: inherit;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             display: flex;
             flex-direction: column;
             box-shadow: var(--shadow);
             height: 100%;
         }
 
-        .board-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
-        }
+        .board-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-hover); }
 
-        .image-container {
-            position: relative;
-            width: 100%;
-            height: 220px;
-            overflow: hidden;
-            background-color: #f0f0f0; /* Rezervna boja dok se slika učitava */
-        }
+        .image-container { width: 100%; height: 220px; overflow: hidden; background-color: #f0f0f0; }
+        .board-image { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+        .board-card:hover .board-image { transform: scale(1.08); }
 
-        .board-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
+        .board-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .board-content h3 { font-size: 1.2rem; margin-bottom: 8px; color: #202124; }
+        .board-content p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
 
-        .board-card:hover .board-image {
-            transform: scale(1.08);
-        }
+        .card-footer { margin-top: auto; display: flex; align-items: center; justify-content: space-between; }
+        .explore-text { color: var(--primary-color); font-weight: 700; font-size: 0.9rem; }
 
-        .board-content {
-            padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-        }
+        footer { background: white; margin-top: 5rem; padding: 3rem 1rem; text-align: center; border-top: 1px solid #eee; }
 
-        .board-content h3 {
-            font-size: 1.25rem;
-            margin-bottom: 8px;
-            color: #202124;
-        }
-
-        .board-content p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .card-footer {
-            margin-top: auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .explore-text {
-            color: var(--primary-color);
-            font-weight: 700;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        footer {
-            background: white;
-            margin-top: 5rem;
-            padding: 4rem 1rem;
-            text-align: center;
-            border-top: 1px solid #eee;
-        }
-
-        footer p {
-            color: var(--text-muted);
-            font-size: 1rem;
-        }
-
-        /* MOBILNA PRILAGODBA */
         @media (max-width: 600px) {
             header h1 { font-size: 1.4rem; }
             .hero-section h2 { font-size: 1.7rem; }
-            .board-grid { gap: 20px; }
         }
     </style>
 </head>
@@ -196,7 +80,7 @@
     <h1>MarketingProdjone</h1>
     <nav>
         <a href="/">Početna</a>
-        <a href="https://www.instagram.com/mark_etingprodjone?igsh=cXR8dHzrbmJob253" target="_blank">Kontakt</a>
+        <a href="https://www.instagram.com/mark_etingprodjone" target="_blank">Kontakt</a>
     </nav>
 </header>
 
@@ -212,11 +96,9 @@
                 <img src="Tech.jpg" alt="Tech" class="board-image">
             </div>
             <div class="board-content">
-                <h3>Must-Have Amazon Tech: Modern Gadgets & Setups</h3>
-                <p>36 pinova • Radni prostori koji inspiriraju kreativnost.</p>
-                <div class="card-footer">
-                    <span class="explore-text">VIEW BOARD ➔</span>
-                </div>
+                <h3>Must-Have Amazon Tech</h3>
+                <p>36 pinova • Radni prostori koji inspiriraju.</p>
+                <div class="card-footer"><span class="explore-text">VIEW BOARD ➔</span></div>
             </div>
         </a>
 
@@ -226,10 +108,8 @@
             </div>
             <div class="board-content">
                 <h3>Beauty & Personal Care</h3>
-                <p>18 pinova • Najbolje od kozmetike i gadgeta.</p>
-                <div class="card-footer">
-                    <span class="explore-text">VIEW BOARD ➔</span>
-                </div>
+                <p>18 pinova • Najbolje od kozmetike.</p>
+                <div class="card-footer"><span class="explore-text">VIEW BOARD ➔</span></div>
             </div>
         </a>
 
@@ -240,9 +120,7 @@
             <div class="board-content">
                 <h3>Exercise & Fitness 2026</h3>
                 <p>4 pina • Ostanite aktivni uz vrhunsku opremu.</p>
-                <div class="card-footer">
-                    <span class="explore-text">VIEW BOARD ➔</span>
-                </div>
+                <div class="card-footer"><span class="explore-text">VIEW BOARD ➔</span></div>
             </div>
         </a>
 
@@ -251,11 +129,9 @@
                 <img src="home-gadgets.jpg" alt="Home Gadgets" class="board-image">
             </div>
             <div class="board-content">
-                <h3>Must-Have Home Gadgets in 2026</h3>
+                <h3>Must-Have Home Gadgets</h3>
                 <p>19 pinova • Moderni gadgeti za svaki dom.</p>
-                <div class="card-footer">
-                    <span class="explore-text">VIEW BOARD ➔</span>
-                </div>
+                <div class="card-footer"><span class="explore-text">VIEW BOARD ➔</span></div>
             </div>
         </a>
     </div>
