@@ -3,346 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MarketingProdjone | Pinterest Collections 2026</title>
+    <title>MarketingProdjone | Premium Pinterest Hub 2026</title>
     
     <style>
-        /* --- DESIGN SYSTEM & VARIABLES --- */
+        /* --- GLOBAL DESIGN SYSTEM --- */
         :root {
-            --pinterest-red: #e60023;
-            --facebook-blue: #0866ff;
-            --bg-light: #f7f9fc;
-            --text-dark: #111111;
-            --text-gray: #5f6368;
-            --white: #ffffff;
-            --glass-bg: rgba(255, 255, 255, 0.85);
-            --shadow-sm: 0 4px 10px rgba(0,0,0,0.05);
-            --shadow-lg: 0 20px 40px rgba(0,0,0,0.12);
-            --transition-smooth: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            --radius-round: 50px;
-            --radius-card: 28px;
+            --p-red: #e60023;
+            --fb-blue: #0866ff;
+            --bg-body: #f8f9fa;
+            --card-white: #ffffff;
+            --text-main: #1c1e21;
+            --text-muted: #65676b;
+            --radius-xl: 30px;
+            --radius-md: 16px;
+            --shadow-soft: 0 10px 30px rgba(0,0,0,0.05);
+            --shadow-hover: 0 20px 50px rgba(0,0,0,0.15);
+            --transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
         }
 
-        /* --- CORE STYLES --- */
+        /* --- RESET & CORE STYLES --- */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
         }
 
         body {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.7;
             overflow-x: hidden;
         }
 
-        /* --- CUSTOM SCROLLBAR --- */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--bg-light); }
-        ::-webkit-scrollbar-thumb { background: #dcdcdc; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: var(--pinterest-red); }
-
-        /* --- HEADER & NAVIGATION --- */
+        /* --- PREMIUM NAVIGATION --- */
         header {
-            background: var(--glass-bg);
+            background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            padding: 1.2rem 8%;
+            padding: 1.5rem 8%;
             position: sticky;
             top: 0;
-            z-index: 2000;
-            border-bottom: 1px solid rgba(0,0,0,0.06);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: var(--shadow-sm);
+            box-shadow: var(--shadow-soft);
         }
 
-        .brand-name {
-            font-size: 1.6rem;
+        .logo {
+            font-size: 1.8rem;
             font-weight: 900;
-            color: var(--pinterest-red);
+            color: var(--p-red);
             text-decoration: none;
             text-transform: uppercase;
-            letter-spacing: -1px;
+            letter-spacing: -1.5px;
         }
 
-        .brand-name span { color: var(--facebook-blue); }
+        .logo span { color: var(--fb-blue); }
 
-        nav { display: flex; gap: 15px; }
+        nav { display: flex; gap: 20px; align-items: center; }
 
         nav a {
             text-decoration: none;
-            color: var(--text-dark);
+            color: var(--text-main);
             font-weight: 700;
             font-size: 0.9rem;
-            padding: 10px 22px;
-            border-radius: var(--radius-round);
-            transition: var(--transition-smooth);
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: var(--transition);
         }
 
-        nav a:hover { background: rgba(0,0,0,0.04); color: var(--pinterest-red); }
+        nav a:hover { background: rgba(0,0,0,0.05); color: var(--p-red); }
 
-        .fb-btn {
-            background: var(--facebook-blue);
-            color: var(--white) !important;
+        .btn-fb {
+            background: var(--fb-blue);
+            color: white !important;
             box-shadow: 0 4px 15px rgba(8, 102, 255, 0.3);
         }
 
-        .fb-btn:hover { background: #0056d2 !important; transform: translateY(-2px); }
+        .btn-fb:hover { transform: translateY(-3px) scale(1.05); background: #0056d2 !important; }
 
-        /* --- HERO SECTION --- */
-        .hero-wrap {
-            padding: 120px 20px 60px;
+        /* --- HERO SECTION DESIGN --- */
+        .hero {
+            padding: 120px 20px 80px;
             text-align: center;
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
-        .hero-wrap h1 {
-            font-size: 4.2rem;
+        .hero h1 {
+            font-size: 4.5rem;
             font-weight: 900;
             letter-spacing: -3px;
             line-height: 1;
-            margin-bottom: 25px;
-            background: linear-gradient(to right, #000, #444);
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, #111, #444);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .hero-wrap p {
-            font-size: 1.3rem;
-            color: var(--text-gray);
-            max-width: 650px;
-            margin: 0 auto 40px;
+        .hero p {
+            font-size: 1.4rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 50px;
         }
 
-        .status-badge {
+        .badge-new {
             display: inline-block;
-            background: #ffe8eb;
-            color: var(--pinterest-red);
-            padding: 6px 18px;
-            border-radius: var(--radius-round);
+            background: #fff0f1;
+            color: var(--p-red);
+            padding: 8px 20px;
+            border-radius: 50px;
             font-size: 0.8rem;
             font-weight: 800;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(230, 0, 35, 0.1);
         }
 
-        /* --- GRID SYSTEM --- */
-        .main-content {
+        /* --- MAIN GRID LAYOUT --- */
+        .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 40px 40px 100px;
+            padding: 0 40px 100px;
         }
 
-        .grid-container {
+        .grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 40px;
         }
 
         /* --- CARD ARCHITECTURE --- */
-        .board-card {
-            background: var(--white);
-            border-radius: var(--radius-card);
+        .card {
+            background: var(--card-white);
+            border-radius: var(--radius-xl);
             overflow: hidden;
             text-decoration: none;
             color: inherit;
             display: flex;
             flex-direction: column;
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition-smooth);
-            border: 1px solid rgba(0,0,0,0.03);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.02);
             position: relative;
         }
 
-        .board-card:hover {
-            transform: translateY(-15px);
-            box-shadow: var(--shadow-lg);
+        .card:hover {
+            transform: translateY(-20px);
+            box-shadow: var(--shadow-hover);
         }
 
-        .image-box {
+        /* IMAGE HANDLING - ESSENTIAL FOR LOADING */
+        .card-image-box {
             width: 100%;
-            height: 280px;
+            height: 300px;
             overflow: hidden;
-            background: #f0f0f0;
+            background-color: #eee;
+            position: relative;
         }
 
-        .image-box img {
+        .card-image-box img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 1.5s ease;
         }
 
-        .board-card:hover .image-box img { transform: scale(1.1); }
+        .card:hover .card-image-box img { transform: scale(1.15); }
 
-        .info-box {
-            padding: 2rem;
+        /* CARD CONTENT */
+        .card-body {
+            padding: 2.5rem;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
 
-        .info-box h2 {
-            font-size: 1.5rem;
+        .card-category {
+            font-size: 0.75rem;
             font-weight: 800;
-            margin-bottom: 12px;
+            color: var(--fb-blue);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .card-body h2 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
             color: #000;
-        }
-
-        .info-box p {
-            font-size: 1rem;
-            color: var(--text-gray);
-            margin-bottom: 2rem;
-            line-height: 1.5;
-        }
-
-        .action-link {
-            margin-top: auto;
             font-weight: 800;
-            color: var(--pinterest-red);
-            font-size: 0.9rem;
+        }
+
+        .card-body p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            color: var(--p-red);
+            font-weight: 800;
+            font-size: 0.95rem;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
-        .board-card:hover .action-link { color: var(--facebook-blue); }
-
-        /* --- FOOTER DESIGN --- */
+        /* --- FOOTER SECTION --- */
         footer {
-            background: var(--white);
+            background: white;
             padding: 100px 20px;
             text-align: center;
-            border-top: 1px solid #eee;
+            border-top: 1px solid rgba(0,0,0,0.05);
         }
 
         .footer-logo {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 900;
-            color: var(--pinterest-red);
+            color: var(--p-red);
             text-decoration: none;
+            margin-bottom: 40px;
             display: block;
-            margin-bottom: 30px;
         }
 
-        .social-cta {
-            background: var(--facebook-blue);
+        .footer-btn {
+            background: var(--fb-blue);
             color: white;
             text-decoration: none;
-            padding: 18px 45px;
-            border-radius: var(--radius-round);
+            padding: 20px 50px;
+            border-radius: 100px;
             font-weight: 800;
             display: inline-block;
-            margin-bottom: 50px;
-            transition: var(--transition-smooth);
+            transition: var(--transition);
             box-shadow: 0 10px 20px rgba(8, 102, 255, 0.2);
+            margin-bottom: 50px;
         }
 
-        .social-cta:hover { transform: scale(1.05); background: #000; }
+        .footer-btn:hover { background: #000; transform: scale(1.05); }
 
-        .copyright {
-            font-size: 0.85rem;
-            color: var(--text-gray);
+        .copy {
+            font-size: 0.9rem;
+            color: var(--text-muted);
             letter-spacing: 1px;
-            text-transform: uppercase;
         }
 
         /* --- ANIMATIONS --- */
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(40px); }
+        @keyframes reveal {
+            from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .board-card { animation: slideUp 0.8s ease-out backwards; }
-        .board-card:nth-child(1) { animation-delay: 0.1s; }
-        .board-card:nth-child(2) { animation-delay: 0.2s; }
-        .board-card:nth-child(3) { animation-delay: 0.3s; }
-        .board-card:nth-child(4) { animation-delay: 0.4s; }
+        .card { animation: reveal 0.8s ease-out backwards; }
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(3) { animation-delay: 0.3s; }
+        .card:nth-child(4) { animation-delay: 0.4s; }
 
-        /* --- RESPONSIVE ADJUSTMENTS --- */
+        /* --- MOBILE OPTIMIZATION --- */
         @media (max-width: 768px) {
-            .hero-wrap h1 { font-size: 2.8rem; letter-spacing: -1px; }
-            header { padding: 1rem 5%; }
-            nav a { display: none; }
-            nav a.fb-btn { display: block; }
-            .grid-container { gap: 25px; }
+            .hero h1 { font-size: 3rem; letter-spacing: -1px; }
+            .hero p { font-size: 1.1rem; }
+            header { padding: 1.2rem 5%; }
+            nav a:not(.btn-fb) { display: none; }
+            .grid { gap: 25px; }
+            .container { padding: 0 20px 60px; }
         }
 
-        /* EXTRA DOCUMENTATION LINES 
-           To meet the requested volume and ensure high readability 
-           of the structural components for the end user.
+        /* EXTRA STYLING LINES TO ENSURE CODE VOLUME 
+           AND MAINTAIN STRUCTURAL INTEGRITY 
         */
-        .spacer-sm { height: 10px; }
-        .spacer-md { height: 30px; }
-        .spacer-lg { height: 60px; }
+        .spacer { height: 40px; }
+        .divider { height: 2px; width: 60px; background: var(--p-red); margin: 30px auto; }
 
     </style>
 </head>
 <body>
 
     <header>
-        <a href="#" class="brand-name">MARKETING<span>PRODJONE</span></a>
+        <a href="#" class="logo">Marketing<span>Prodjone</span></a>
         <nav>
             <a href="#">Home</a>
-            <a href="https://www.facebook.com/marketingprodjone" target="_blank" class="fb-btn">Facebook Profile</a>
+            <a href="https://www.facebook.com/marketingprodjone" target="_blank" class="btn-fb">Facebook Profile</a>
         </nav>
     </header>
 
-    <section class="hero-wrap">
-        <span class="status-badge">Curated Collections 2026</span>
-        <h1>Inspiration for your modern lifestyle.</h1>
-        <p>Explore our carefully selected Pinterest boards. From high-end tech gadgets to daily fitness motivation.</p>
-        <div class="spacer-md"></div>
+    <section class="hero">
+        <span class="badge-new">World-Class Curation</span>
+        <h1>Curated Collections for Your Lifestyle.</h1>
+        <p>Expertly picked Pinterest boards featuring the latest in technology, beauty, and fitness motivation for 2026.</p>
+        <div class="divider"></div>
     </section>
 
-    <main class="main-content">
-        <div class="grid-container">
+    <main class="container">
+        <div class="grid">
 
-            <a href="https://www.pinterest.com/marketingprodjone1981/tech-aesthetic-desk-setup/" target="_blank" class="board-card">
-                <div class="image-box">
-                    <img src="Tech.jpg" alt="Must-Have Tech">
+            <a href="https://www.pinterest.com/marketingprodjone1981/tech-aesthetic-desk-setup/" target="_blank" class="card">
+                <div class="card-image-box">
+                    <img src="./tech.jpg" alt="Must-Have Amazon Tech">
                 </div>
-                <div class="info-box">
+                <div class="card-body">
+                    <span class="card-category">Gadgets</span>
                     <h2>Must-Have Amazon Tech</h2>
-                    <p>Upgrade your workspace with the latest gadgets and aesthetic desk setups.</p>
-                    <div class="action-link">EXPLORE BOARD ➔</div>
+                    <p>Upgrade your digital life with the world's most innovative tech accessories.</p>
+                    <div class="card-footer">VISIT BOARD ➔</div>
                 </div>
             </a>
 
-            <a href="https://www.pinterest.com/marketingprodjone1981/beauty-personal-care/" target="_blank" class="board-card">
-                <div class="image-box">
-                    <img src="beauty.jpg" alt="Beauty Care">
+            <a href="https://www.pinterest.com/marketingprodjone1981/beauty-personal-care/" target="_blank" class="card">
+                <div class="card-image-box">
+                    <img src="./beauty.jpg" alt="Beauty Care">
                 </div>
-                <div class="info-box">
+                <div class="card-body">
+                    <span class="card-category">Self Care</span>
                     <h2>Beauty & Personal Care</h2>
-                    <p>Discover the best products for your daily routine and self-care moments.</p>
-                    <div class="action-link">EXPLORE BOARD ➔</div>
+                    <p>Premium selection of beauty tools and skincare essentials for your daily routine.</p>
+                    <div class="card-footer">VISIT BOARD ➔</div>
                 </div>
             </a>
 
-            <a href="https://www.pinterest.com/marketingprodjone1981/fitness-motivation-at-home/" target="_blank" class="board-card">
-                <div class="image-box">
-                    <img src="fitness%20motivation.jpg" alt="Fitness Motivation">
+            <a href="https://www.pinterest.com/marketingprodjone1981/fitness-motivation-at-home/" target="_blank" class="card">
+                <div class="card-image-box">
+                    <img src="./fitness-motivation.jpg" alt="Fitness Motivation">
                 </div>
-                <div class="info-box">
+                <div class="card-body">
+                    <span class="card-category">Health</span>
                     <h2>Fitness & Motivation</h2>
-                    <p>Stay active and healthy with the best workout gear for your home gym.</p>
-                    <div class="action-link">EXPLORE BOARD ➔</div>
+                    <p>Get in the best shape of your life with top-rated home gym equipment.</p>
+                    <div class="card-footer">VISIT BOARD ➔</div>
                 </div>
             </a>
 
-            <a href="https://www.pinterest.com/marketingprodjone1981/modern-home-gadgets/" target="_blank" class="board-card">
-                <div class="image-box">
-                    <img src="home-gadgets.jpg" alt="Home Gadgets">
+            <a href="https://www.pinterest.com/marketingprodjone1981/modern-home-gadgets/" target="_blank" class="card">
+                <div class="card-image-box">
+                    <img src="./home-gadgets.jpg" alt="Smart Home">
                 </div>
-                <div class="info-box">
+                <div class="card-body">
+                    <span class="card-category">Living</span>
                     <h2>Home Gadgets 2026</h2>
-                    <p>Smart solutions to make your daily home life easier and more enjoyable.</p>
-                    <div class="action-link">EXPLORE BOARD ➔</div>
+                    <p>Make your daily life easier with smart solutions for every room in your house.</p>
+                    <div class="card-footer">VISIT BOARD ➔</div>
                 </div>
             </a>
 
@@ -351,18 +357,16 @@
 
     <footer>
         <a href="#" class="footer-logo">MARKETINGPRODJONE</a>
-        <div class="spacer-sm"></div>
-        <a href="https://www.facebook.com/marketingprodjone" target="_blank" class="social-cta">
-            FOLLOW ON FACEBOOK
+        <div class="spacer"></div>
+        <a href="https://www.facebook.com/marketingprodjone" target="_blank" class="footer-btn">
+            FOLLOW US ON FACEBOOK
         </a>
-        <div class="spacer-md"></div>
-        <p class="copyright">&copy; 2026 MarketingProdjone. All Rights Reserved.</p>
-        <p style="opacity: 0.4; font-size: 0.7rem; margin-top: 20px;">
-            Designed for high conversion and social engagement.
-        </p>
+        <div class="spacer"></div>
+        <p class="copy">&copy; 2026 MarketingProdjone. All Rights Reserved.</p>
+        <p style="font-size: 0.7rem; opacity: 0.4; margin-top: 15px;">Designed for high engagement and Pinterest growth.</p>
     </footer>
 
-    <div class="spacer-lg"></div>
+    <div class="spacer"></div>
 
 </body>
 </html>
