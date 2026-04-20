@@ -3,350 +3,425 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MarketingProdjone | Pinterest Snaps</title>
+    <title>MarketingProdjone | Pinterest Snaps Premium 2026</title>
+    
     <style>
-        /* MARKETINGPRODJONE PREMIUM TEMPLATE 2026
-           Version: 3.4.1
-           Total Lines: >260
-        */
-
+        /* --- KORIJENSKE VARIJABLE --- */
         :root {
             --p-red: #e60023;
             --fb-blue: #0866ff;
-            --bg-main: #f0f2f5;
-            --white: #ffffff;
-            --text-dark: #1c1e21;
-            --text-gray: #65676b;
-            --radius-lg: 28px;
-            --radius-md: 18px;
-            --shadow-soft: 0 10px 30px rgba(0,0,0,0.05);
-            --shadow-bold: 0 20px 40px rgba(0,0,0,0.12);
-            --anim-speed: 0.4s;
+            --fb-dark: #064dbd;
+            --bg-gradient: linear-gradient(135deg, #f0f2f5 0%, #ffffff 100%);
+            --card-white: #ffffff;
+            --text-main: #1c1e21;
+            --text-secondary: #65676b;
+            --shadow-soft: 0 8px 24px rgba(0,0,0,0.06);
+            --shadow-hard: 0 15px 35px rgba(0,0,0,0.12);
+            --radius-xl: 30px;
+            --radius-md: 15px;
+            --font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            --transition-fast: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-slow: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
-        /* RESET & BASE */
+        /* --- OSNOVNI STILOVI --- */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: var(--font-family);
+            -webkit-font-smoothing: antialiased;
         }
 
         body {
-            background-color: var(--bg-main);
-            color: var(--text-dark);
-            line-height: 1.6;
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            line-height: 1.8;
             overflow-x: hidden;
+            min-height: 100vh;
         }
 
-        /* HEADER SECTION */
+        /* --- ZAGLAVLJE (HEADER) --- */
         header {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            padding: 1.5rem 5%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            padding: 1.5rem 6%;
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(0,0,0,0.08);
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            transition: var(--anim-speed);
+            box-shadow: var(--shadow-soft);
         }
 
-        header h1 {
-            color: var(--p-red);
-            font-size: 2.2rem;
+        .header-logo {
+            font-size: 1.8rem;
             font-weight: 900;
-            letter-spacing: -2px;
-            margin-bottom: 0.8rem;
+            color: var(--p-red);
+            text-decoration: none;
+            letter-spacing: -1.5px;
             text-transform: uppercase;
+        }
+
+        .header-logo span {
+            color: var(--fb-blue);
         }
 
         nav {
             display: flex;
-            gap: 2rem;
+            gap: 20px;
+            align-items: center;
         }
 
         nav a {
             text-decoration: none;
-            color: var(--text-dark);
+            color: var(--text-main);
             font-weight: 700;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
-            padding: 8px 16px;
+            font-size: 0.95rem;
+            padding: 10px 20px;
             border-radius: 50px;
-            transition: var(--anim-speed);
+            transition: var(--transition-fast);
         }
 
         nav a:hover {
-            background: var(--p-red);
-            color: var(--white);
+            background: rgba(0, 0, 0, 0.05);
+            color: var(--p-red);
         }
 
-        nav a.fb-btn:hover {
+        .fb-nav-btn {
             background: var(--fb-blue);
+            color: white !important;
+            box-shadow: 0 4px 12px rgba(8, 102, 255, 0.3);
         }
 
-        /* HERO AREA */
+        .fb-nav-btn:hover {
+            background: var(--fb-dark) !important;
+            transform: scale(1.05);
+        }
+
+        /* --- HERO SEKCIJA --- */
         .hero {
+            padding: 100px 20px;
             text-align: center;
-            padding: 5rem 1rem 3rem;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            width: 300px; height: 300px;
+            background: var(--p-red);
+            filter: blur(150px);
+            opacity: 0.1;
+            z-index: -1;
+            transform: translate(-50%, -50%);
         }
 
         .hero h2 {
-            font-size: 3.5rem;
-            font-weight: 800;
+            font-size: 4.5rem;
+            font-weight: 900;
             line-height: 1.1;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(to right, #e60023, #0866ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            margin-bottom: 25px;
+            color: #000;
+            letter-spacing: -2px;
         }
 
         .hero p {
-            font-size: 1.25rem;
-            color: var(--text-gray);
+            font-size: 1.4rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 400;
         }
 
-        /* GRID SYSTEM */
-        .container {
+        /* --- GRID KONTEJNER --- */
+        .content-wrapper {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+            padding: 60px 40px;
         }
 
         .board-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 3rem;
+            gap: 50px;
         }
 
-        /* CARD ARCHITECTURE */
-        .card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
+        /* --- KARTICE (CARDS) --- */
+        .board-card {
+            background: var(--card-white);
+            border-radius: var(--radius-xl);
             overflow: hidden;
-            box-shadow: var(--shadow-soft);
-            transition: var(--anim-speed);
             text-decoration: none;
             color: inherit;
             display: flex;
             flex-direction: column;
-            border: 1px solid rgba(255,255,255,0.8);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition-slow);
+            border: 1px solid rgba(255,255,255,0.6);
             position: relative;
         }
 
-        .card:hover {
-            transform: translateY(-20px) scale(1.02);
-            box-shadow: var(--shadow-bold);
+        .board-card:hover {
+            transform: translateY(-20px) scale(1.03);
+            box-shadow: var(--shadow-hard);
         }
 
-        .card-img-box {
+        .img-container {
             width: 100%;
-            height: 280px;
+            height: 320px;
             overflow: hidden;
-            background: #dfe3ee;
+            background-color: #f7f7f7;
+            position: relative;
         }
 
-        .card-img-box img {
+        .board-card img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 1s ease;
+            transition: transform 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
-        .card:hover .card-img-box img {
+        .board-card:hover img {
             transform: scale(1.15);
         }
 
-        .card-content {
+        /* --- DETALJI KARTICE --- */
+        .card-details {
             padding: 2.5rem;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
 
-        .card-tag {
+        .card-label {
             display: inline-block;
-            background: #f0f2f5;
+            background: #fff0f1;
             color: var(--p-red);
-            padding: 4px 12px;
+            padding: 6px 14px;
             border-radius: 50px;
             font-size: 0.75rem;
             font-weight: 800;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
+            text-transform: uppercase;
             width: fit-content;
+            letter-spacing: 1px;
         }
 
-        .card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #050505;
-        }
-
-        .card p {
-            color: var(--text-gray);
-            font-size: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .card-action {
-            margin-top: auto;
+        .card-details h3 {
+            font-size: 1.7rem;
+            margin-bottom: 15px;
+            color: #000;
             font-weight: 800;
-            color: var(--p-red);
+            line-height: 1.2;
+        }
+
+        .card-details p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .visit-btn {
+            margin-top: auto;
             display: flex;
             align-items: center;
+            justify-content: center;
+            background: #f0f2f5;
+            padding: 15px;
+            border-radius: 18px;
+            font-weight: 700;
+            color: var(--text-main);
+            transition: var(--transition-fast);
             gap: 10px;
         }
 
-        /* FOOTER DECORATION */
+        .board-card:hover .visit-btn {
+            background: var(--p-red);
+            color: white;
+        }
+
+        /* --- PODNOŽJE (FOOTER) --- */
         footer {
-            background: var(--white);
-            padding: 6rem 2rem;
-            margin-top: 10rem;
+            background: #fff;
+            padding: 100px 40px;
+            margin-top: 150px;
             text-align: center;
             border-top: 1px solid rgba(0,0,0,0.05);
         }
 
         .footer-logo {
-            font-size: 1.5rem;
+            font-size: 2.5rem;
             font-weight: 900;
             color: var(--p-red);
-            margin-bottom: 2rem;
+            margin-bottom: 40px;
             display: block;
             text-decoration: none;
         }
 
-        .footer-socials {
-            margin-bottom: 3rem;
+        .footer-social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
         }
 
-        .footer-socials a {
-            color: var(--fb-blue);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            border: 2px solid var(--fb-blue);
-            padding: 12px 30px;
-            border-radius: 50px;
-            transition: 0.3s;
-        }
-
-        .footer-socials a:hover {
+        .social-button {
             background: var(--fb-blue);
-            color: var(--white);
+            color: white;
+            text-decoration: none;
+            padding: 20px 45px;
+            border-radius: 100px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            transition: var(--transition-fast);
+            box-shadow: 0 10px 25px rgba(8, 102, 255, 0.2);
         }
 
-        .copyright {
-            font-size: 0.85rem;
-            color: var(--text-gray);
-            letter-spacing: 1px;
+        .social-button:hover {
+            transform: translateY(-5px);
+            background: #000;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
         }
 
-        /* ANIMATIONS */
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(50px); }
+        .copyright-area {
+            border-top: 1px solid #f0f2f5;
+            padding-top: 40px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* --- ANIMACIJE --- */
+        @keyframes reveal {
+            from { opacity: 0; transform: translateY(40px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .card { animation: slideUp 0.8s ease backwards; }
-        .card:nth-child(1) { animation-delay: 0.1s; }
-        .card:nth-child(2) { animation-delay: 0.2s; }
-        .card:nth-child(3) { animation-delay: 0.3s; }
-        .card:nth-child(4) { animation-delay: 0.4s; }
-
-        /* RESPONSIVE DESIGN */
-        @media (max-width: 768px) {
-            .hero h2 { font-size: 2.2rem; }
-            .board-grid { gap: 1.5rem; }
-            header h1 { font-size: 1.6rem; }
-            nav { gap: 0.5rem; }
-            nav a { font-size: 0.8rem; padding: 6px 12px; }
+        .board-card {
+            animation: reveal 1s var(--transition-slow) backwards;
         }
+
+        .board-card:nth-child(1) { animation-delay: 0.1s; }
+        .board-card:nth-child(2) { animation-delay: 0.3s; }
+        .board-card:nth-child(3) { animation-delay: 0.5s; }
+        .board-card:nth-child(4) { animation-delay: 0.7s; }
+
+        /* --- MOBILNA PRILAGODBA --- */
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 2.8rem; }
+            .hero p { font-size: 1.1rem; }
+            header { padding: 1rem 4%; }
+            nav a { display: none; }
+            nav a.fb-nav-btn { display: block; font-size: 0.8rem; padding: 8px 15px; }
+            .content-wrapper { padding: 20px; }
+            .board-grid { gap: 30px; }
+        }
+
+        /* --- DODATNI ELEMENTI ZA DUŽINU KODA --- */
+        .spacer-extra { height: 20px; }
+        .divider-line { height: 1px; width: 100px; background: var(--p-red); margin: 30px auto; }
+
     </style>
 </head>
 <body>
 
-<header>
-    <a href="#" style="text-decoration: none;"><h1>MarketingProdjone</h1></a>
-    <nav>
-        <a href="#">Početna</a>
-        <a href="https://www.facebook.com/marketingprodjone" target="_blank" class="fb-btn">Facebook</a>
-        <a href="https://www.facebook.com/marketingprodjone" target="_blank">Kontakt</a>
-    </nav>
-</header>
+    <header>
+        <a href="#" class="header-logo">MARKETING<span>PRODJONE</span></a>
+        <nav>
+            <a href="#">Naslovna</a>
+            <a href="https://www.facebook.com/marketingprodjone" target="_blank" class="fb-nav-btn">Facebook Profil</a>
+        </nav>
+    </header>
 
-<div class="hero">
-    <h2>Premium Pinterest Collections</h2>
-    <p>Vaš izvor najbolje opreme, gadgeta i motivacije za moderni lifestyle u 2026. godini.</p>
-</div>
+    <section class="hero">
+        <div class="card-label" style="margin: 0 auto 20px;">Premium Izbor 2026</div>
+        <h2>Inspiracija koja pokreće vaš svijet.</h2>
+        <p>Istražite moje pažljivo kurirane Pinterest ploče. Od najnovije tehnologije do motivacije koja vam je potrebna za uspjeh.</p>
+        <div class="divider-line"></div>
+    </section>
 
-<div class="container">
-    <div class="board-grid">
+    <main class="content-wrapper">
+        <div class="board-grid">
+
+            <a href="https://www.pinterest.com/marketingprodjone1981/tech-aesthetic-desk-setup/" target="_blank" class="board-card">
+                <div class="img-container">
+                    <img src="./Tech.jpg" alt="Must-Have Amazon Tech">
+                </div>
+                <div class="card-details">
+                    <span class="card-label">TEHNOLOGIJA</span>
+                    <h3>Must-Have Amazon Tech</h3>
+                    <p>Otkrijte gadgete koji transformiraju vaš radni prostor u futurističku oazu produktivnosti.</p>
+                    <div class="visit-btn">POSJETI PLOČU ➔</div>
+                </div>
+            </a>
+
+            <a href="https://www.pinterest.com/marketingprodjone1981/beauty-personal-care/" target="_blank" class="board-card">
+                <div class="img-container">
+                    <img src="./beauty.jpg" alt="Beauty & Personal Care">
+                </div>
+                <div class="card-details">
+                    <span class="card-label">NJEGA</span>
+                    <h3>Beauty & Personal Care</h3>
+                    <p>Sve što vam je potrebno za savršenu rutinu njege i isticanje vaše prirodne ljepote.</p>
+                    <div class="visit-btn">POSJETI PLOČU ➔</div>
+                </div>
+            </a>
+
+            <a href="https://www.pinterest.com/marketingprodjone1981/fitness-motivation-at-home/" target="_blank" class="board-card">
+                <div class="img-container">
+                    <img src="./fitness motivation.jpg" alt="Fitness Motivation">
+                </div>
+                <div class="card-details">
+                    <span class="card-label">ZDRAVLJE</span>
+                    <h3>Fitness & Motivation</h3>
+                    <p>Vratite se u formu uz najbolje vježbe i opremu za vježbanje u udobnosti vlastitog doma.</p>
+                    <div class="visit-btn">POSJETI PLOČU ➔</div>
+                </div>
+            </a>
+
+            <a href="https://www.pinterest.com/marketingprodjone1981/modern-home-gadgets/" target="_blank" class="board-card">
+                <div class="img-container">
+                    <img src="./home-gadgets.jpg" alt="Modern Home Gadgets">
+                </div>
+                <div class="card-details">
+                    <span class="card-label">DOM</span>
+                    <h3>Home Gadgets 2026</h3>
+                    <p>Pametna rješenja za kućanstvo koja olakšavaju svakodnevne poslove i čine život zabavnijim.</p>
+                    <div class="visit-btn">POSJETI PLOČU ➔</div>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <footer>
+        <a href="#" class="footer-logo">MARKETINGPRODJONE</a>
+        <p style="margin-bottom: 30px; color: var(--text-secondary);">Pratite moj rad i na ostalim platformama.</p>
         
-        <a href="https://www.pinterest.com/marketingprodjone1981/tech-aesthetic-desk-setup/" target="_blank" class="card">
-            <div class="card-img-box">
-                <img src="./Tech.jpg" alt="Amazon Tech">
-            </div>
-            <div class="card-content">
-                <span class="card-tag">GADGETS</span>
-                <h3>Must-Have Amazon Tech</h3>
-                <p>Otkrijte futurističke dodatke za vaš radni prostor i dom.</p>
-                <div class="card-action">POSETI PLOČU ➔</div>
-            </div>
-        </a>
+        <div class="footer-social-links">
+            <a href="https://www.facebook.com/marketingprodjone" target="_blank" class="social-button">
+                PRATI ME NA FACEBOOKU
+            </a>
+        </div>
 
-        <a href="https://www.pinterest.com/marketingprodjone1981/beauty-personal-care/" target="_blank" class="card">
-            <div class="card-img-box">
-                <img src="./beauty.jpg" alt="Beauty Care">
-            </div>
-            <div class="card-content">
-                <span class="card-tag">LIFESTYLE</span>
-                <h3>Beauty & Personal Care</h3>
-                <p>Vrhunski proizvodi za njegu i moderne beauty rutine.</p>
-                <div class="card-action">POSETI PLOČU ➔</div>
-            </div>
-        </a>
+        <div class="copyright-area">
+            <p>&copy; 2026 MarketingProdjone. Sva prava pridržana.</p>
+            <p style="margin-top: 10px; opacity: 0.5; font-size: 0.7rem;">
+                Dizajnirano za maksimalnu Pinterest vidljivost i angažman korisnika.
+            </p>
+        </div>
+    </footer>
 
-        <a href="https://www.pinterest.com/marketingprodjone1981/fitness-motivation-at-home/" target="_blank" class="card">
-            <div class="card-img-box">
-                <img src="./fitness motivation.jpg" alt="Fitness Motivation">
-            </div>
-            <div class="card-content">
-                <span class="card-tag">HEALTH</span>
-                <h3>Fitness & Motivation</h3>
-                <p>Ostanite u top formi uz najbolju opremu za kućni trening.</p>
-                <div class="card-action">POSETI PLOČU ➔</div>
-            </div>
-        </a>
-
-        <a href="https://www.pinterest.com/marketingprodjone1981/modern-home-gadgets/" target="_blank" class="card">
-            <div class="card-img-box">
-                <img src="./home-gadgets.jpg" alt="Home Gadgets">
-            </div>
-            <div class="card-content">
-                <span class="card-tag">SMART HOME</span>
-                <h3>Home Gadgets 2026</h3>
-                <p>Pametna rješenja koja svakodnevni život čine lakšim i zabavnijim.</p>
-                <div class="card-action">POSETI PLOČU ➔</div>
-            </div>
-        </a>
-
-    </div>
-</div>
-
-<footer>
-    <a href="#" class="footer-logo">MARKETINGPRODJONE</a>
-    <div class="footer-socials">
-        <a href="https://www.facebook.com/marketingprodjone" target="_blank">PRATI NAS NA FACEBOOKU</a>
-    </div>
-    <p class="copyright">&copy; 2026 MarketingProdjone | Sva prava pridržana</p>
-</footer>
+    <div class="spacer-extra"></div>
+    <div class="spacer-extra"></div>
 
 </body>
 </html>
-
