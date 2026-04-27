@@ -1,58 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketingProdjone | Amazon Tech Finds</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #333; line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; padding: 15px 0; border-bottom: 1px solid #eee; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: bold; text-decoration: none; color: #333; }
+        .logo span { color: #007185; }
+        .fb-cta { background: #1877F2; color: white; padding: 8px 18px; border-radius: 5px; text-decoration: none; font-size: 0.9rem; }
+        
+        .hero { padding: 40px 0; text-align: center; background: #fff; }
+        .hero img { max-width: 600px; width: 100%; height: auto; border-radius: 10px; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 40px; }
+        .card { background: #fff; border-radius: 10px; overflow: hidden; text-decoration: none; color: inherit; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid #eee; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .img-h { height: 200px; overflow: hidden; }
+        .img-h img { width: 100%; height: 100%; object-fit: cover; }
+        .content { padding: 20px; }
+        .content span { font-size: 0.75rem; text-transform: uppercase; color: #007185; font-weight: bold; }
+        .content h3 { margin: 10px 0; font-size: 1.25rem; }
+        .content p { font-size: 0.9rem; color: #666; }
+
+        footer { background: #333; color: #fff; padding: 30px 0; text-align: center; margin-top: 50px; }
+    </style>
+</head>
 <body>
 
-<header style="padding: 10px 0; border-bottom: none;">
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-        <a href="#" class="logo" style="font-size: 1.2rem;">Marketing<span>Prodjone</span></a>
+<header>
+    <div class="container nav-flex">
+        <a href="#" class="logo">Marketing<span>Prodjone</span></a>
         <nav>
-            <a href="https://www.facebook.com/marketingprodjone" target="_blank" class="fb-cta" style="padding: 5px 15px; font-size: 0.8rem;">Facebook</a>
+            <a href="https://www.facebook.com/marketingprodjone" target="_blank" class="fb-cta">Follow on Facebook</a>
         </nav>
     </div>
 </header>
 
-<section class="hero" style="padding: 40px 0; text-align: center; background-color: #f4f7f6;">
+<section class="hero">
     <div class="container">
-        <img src="./logo-tech.png" alt="MarketingProdjone - Amazon Tech & Smart Home Finds" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        <img src="logo-tech.png" alt="MarketingProdjone - Amazon Tech & Smart Home Finds">
     </div>
 </section>
 
-<div class="container" style="margin-top: 30px;">
-    <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+<div class="container">
+    <div class="grid">
         
-        <a href="TVOJA_PINTEREST_IL_AMAZON_LINK_1" target="_blank" class="card">
-            <div class="img-h"><img src="./lighting.jpg" alt="Smart Lighting"></div>
+        <a href="#" class="card">
+            <div class="img-h">
+                <img src="https://images.unsplash.com/photo-1550985616-10810253b84d?auto=format&fit=crop&w=500&q=80" alt="Smart Lighting">
+            </div>
             <div class="content">
                 <span>Smart Home</span>
                 <h3>Ambient Lighting</h3>
-                <p>Top-rated smart bulbs and LED strips to set the perfect mood.</p>
+                <p>Top-rated smart bulbs and LED strips to set the perfect mood in any room.</p>
             </div>
         </a>
 
-        <a href="TVOJA_PINTEREST_IL_AMAZON_LINK_2" target="_blank" class="card">
-            <div class="img-h"><img src="./desk-setup.jpg" alt="Home Office Setup"></div>
+        <a href="#" class="card">
+            <div class="img-h">
+                <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=500&q=80" alt="Home Office">
+            </div>
             <div class="content">
                 <span>Workstation</span>
                 <h3>Home Office Tech</h3>
-                <p>Boost productivity with the best desk gadgets and ergonomic accessories.</p>
+                <p>Boost your productivity with the best desk gadgets and ergonomic accessories.</p>
             </div>
         </a>
 
-        <a href="TVOJA_PINTEREST_IL_AMAZON_LINK_3" target="_blank" class="card">
-            <div class="img-h"><img src="./security.jpg" alt="Smart Security"></div>
+        <a href="#" class="card">
+            <div class="img-h">
+                <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=500&q=80" alt="Security">
+            </div>
             <div class="content">
                 <span>Safety</span>
                 <h3>Smart Home Security</h3>
-                <p>Keep your home safe with easy-to-install smart cameras and locks.</p>
+                <p>Keep your home safe with easy-to-install smart cameras, sensors, and locks.</p>
             </div>
         </a>
 
     </div>
 </div>
 
-<footer style="margin-top: 40px; padding: 20px 0; text-align: center; background-color: #333; color: #fff;">
+<footer>
     <div class="container">
-        <p style="margin: 0; font-size: 0.9rem;">&copy; 2024 MarketingProdjone. All Rights Reserved.</p>
+        <p>&copy; 2024 MarketingProdjone. All Rights Reserved.</p>
     </div>
 </footer>
 
 </body>
+</html>
 
